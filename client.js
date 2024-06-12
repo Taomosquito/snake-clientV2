@@ -10,19 +10,15 @@ const session = function () {
   // interpret incoming data as text
   sessionObject.setEncoding("utf8");
 
-  sessionObject.on("data", (data) => {
-    console.log(`server says: ${data}`)
-  });
   sessionObject.on("connect", () => {
     sessionObject.write("Name: SDP")
   })
 
+  sessionObject.on("data", (data) => {
+    console.log(`server says: ${data}`)
+  });
+
   return sessionObject;
 };
-
-// const connectionHost = connect.conn.host;
-// const connectionPort = connect.conn.port;
-
-// console.log(connect.conn.port);
 
 module.exports = { session };
