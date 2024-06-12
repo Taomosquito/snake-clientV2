@@ -26,6 +26,12 @@ const handleUserInput = function (key) {
     case 'd':
       connection.write("Move: right");
       break;
+    case 'q':
+      connection.write("Say: Two Arms!!!");
+      break;
+    case 'e':
+      connection.write("Say: Retreat!!!");
+      break;
     case '\u0003':
       process.exit();
       break;
