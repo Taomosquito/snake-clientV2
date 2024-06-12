@@ -1,5 +1,4 @@
-const {connect} = require("./client.js");
+const { session } = require("./client.js");
 console.log(`Connecting`)
-connect(); // need the server started first.
+session(); // need the server started first.
 // console.log(`Connecting to ${connectionHost}:${connectionPort}}`);
-console.log(`Connected`);
