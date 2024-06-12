@@ -17,20 +17,22 @@ const setupInput = function (session) {
 
 const handleUserInput = function (key) {
   // code handling the key press will go here
-  if(key === "w") {
-    connection.write("Move: up");
-  }
-  if(key === "s") {
-    connection.write("Move: down");
-  }
-  if(key === "a") {
-    connection.write("Move: left");
-  }
-  if(key === "d") {
-    connection.write("Move: right");
-  }
-  if(key === "\u0003") {
-    process.exit();
+  switch (key) {
+    case 'w':
+      connection.write("Move: up");
+      break;
+    case 's':
+      connection.write("Move: down");
+      break;
+    case 'a':
+      connection.write("Move: left");
+      break;
+    case 'd':
+      connection.write("Move: right");
+      break;
+    case '\u0003':
+      process.exit();
+      break;
   }
 };
 
